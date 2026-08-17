@@ -145,7 +145,7 @@ export default function Header({ className }: { className?: string }) {
                 delay: 0.1,
                 ease: "easeOut" as const,
               }}
-              className="text-center font-semibold text-5xl md:text-6xl lg:text-[66px] leading-[1.1] tracking-[-0.02em] text-white max-w-4xl mt-0 mb-5"
+              className="text-center font-semibold text-3xl md:text-6xl lg:text-[66px] leading-[1.1] tracking-[-0.02em] text-white max-w-4xl mt-0 mb-5"
             >
               The Future of
               <br />

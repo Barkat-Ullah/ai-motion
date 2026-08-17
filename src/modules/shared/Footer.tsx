@@ -59,7 +59,7 @@ export default function Footer({ className }: { className?: string }) {
 
   return (
     <section className={"w-full " + (className || "")}>
-      <div className="m-2 rounded-[20px] overflow-hidden relative h-screen min-h-[800px] flex flex-col font-sans">
+      <div className="m-2 rounded-[20px] overflow-hidden relative min-h-[680px] md:min-h-[800px] flex flex-col font-sans">
         {/* Background Image */}
         <div
           className="absolute inset-0 z-0"
@@ -72,13 +72,13 @@ export default function Footer({ className }: { className?: string }) {
         />
 
         {/* Row 1 — Newsletter Hero */}
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-20 pt-20 pb-10">
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-5 sm:px-10 md:px-20 pt-14 md:pt-20 pb-8 md:pb-10">
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" as const }}
-            className="text-[48px] md:text-[80px] font-[800] text-white leading-none tracking-[-0.02em] text-center"
+            className="text-3xl sm:text-5xl md:text-[64px] lg:text-[80px] font-[800] text-white leading-[1.05] tracking-[-0.02em] text-center"
           >
             Weekly News. No Fluff.
           </motion.h1>
@@ -92,14 +92,14 @@ export default function Footer({ className }: { className?: string }) {
               delay: 0.25,
               ease: "easeOut" as const,
             }}
-            className="mt-10 w-full max-w-[520px] h-16 bg-white/18 backdrop-blur-md rounded-full border border-white/25 flex overflow-hidden"
+            className="mt-8 sm:mt-10 w-full max-w-[520px] bg-white/18 backdrop-blur-md rounded-full border border-white/25 flex flex-col sm:flex-row items-stretch gap-2 sm:gap-1.5 p-2 overflow-hidden"
           >
             <input
               type="email"
               placeholder="Enter Your E-mail"
-              className="flex-1 bg-transparent px-6 text-[15px] text-white placeholder:text-white/70 outline-none border-none"
+              className="h-12 sm:h-14 flex-1 min-w-0 rounded-full sm:rounded-none bg-transparent px-5 sm:px-6 text-[15px] text-white placeholder:text-white/70 outline-none border-none"
             />
-            <button className="h-full px-8 bg-[#00bc7d] text-white rounded-full text-[13px] font-bold tracking-[0.1em] hover:bg-[#00a66e] transition-colors whitespace-nowrap">
+            <button className="h-12 sm:h-14 shrink-0 w-full sm:w-auto px-6 sm:px-8 bg-[#00bc7d] text-white rounded-full text-[13px] font-bold tracking-[0.1em] hover:bg-[#00a66e] transition-colors whitespace-nowrap flex items-center justify-center">
               SUBSCRIBE
             </button>
           </motion.div>
@@ -111,12 +111,12 @@ export default function Footer({ className }: { className?: string }) {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative z-10 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[24px] mx-5 mb-5 p-8 md:p-10 shadow-2xl"
+          className="relative z-10 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[24px] mx-3 sm:mx-5 mb-3 sm:mb-5 p-5 sm:p-8 md:p-10 shadow-2xl"
         >
           {/* Footer Row A */}
-          <div className="flex flex-col md:flex-row justify-between gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 items-start">
             {/* Column 1 — Brand */}
-            <div className="md:w-[30%]">
+            <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center gap-2">
                 <Image
                   src="https://cdn.jiro.build/Kelo/Kelo%20White.svg"
@@ -204,12 +204,12 @@ export default function Footer({ className }: { className?: string }) {
           </div>
 
           {/* Footer Row B */}
-          <div className="mt-6 pt-5 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-4">
+          <div className="mt-6 pt-5 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 w-full">
               <span className="text-white/50 text-[12px]">
                 Our Story Continues:
               </span>
-              <div className="flex gap-4">
+              <div className="flex gap-3 sm:gap-4 flex-wrap">
                 {socialIcons.map((social) => (
                   <a
                     key={social.name}

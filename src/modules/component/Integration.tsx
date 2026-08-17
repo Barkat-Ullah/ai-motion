@@ -466,7 +466,7 @@ export default function IntegrationSection({
 
       <section
         className={
-          "bg-white py-20 px-6 md:px-20 font-sans overflow-hidden " +
+          "bg-white py-16 md:py-20 px-4 sm:px-6 md:px-20 font-sans overflow-hidden " +
           (className || "")
         }
       >
@@ -478,7 +478,7 @@ export default function IntegrationSection({
         <div className="max-w-[1300px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
             <div className="flex-1">
-              <h2 className="font-semibold text-4xl md:text-[42px] text-[#111111] mb-2 leading-tight">
+              <h2 className="font-semibold text-3xl sm:text-4xl md:text-[42px] text-[#111111] mb-2 leading-tight">
                 Works With Your Stack
               </h2>
               <p className="text-[15px] text-[#888888]">
@@ -491,8 +491,8 @@ export default function IntegrationSection({
           </div>
 
           <div className="relative">
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 md:w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
 
             <div
               ref={scrollRef}
@@ -511,7 +511,7 @@ export default function IntegrationSection({
                   key={item.id + "-" + index}
                   whileHover={{ y: -4 }}
                   className={
-                    "min-w-[220px] md:min-w-[260px] bg-[#f9f9f9] border border-[#ebebeb] rounded-[14px] p-7 md:p-8 flex flex-col gap-3 transition-all duration-200 hover:bg-white hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] " +
+                    "min-w-[200px] sm:min-w-[220px] md:min-w-[260px] bg-[#f9f9f9] border border-[#ebebeb] rounded-[14px] p-5 sm:p-7 md:p-8 flex flex-col gap-3 transition-all duration-200 hover:bg-white hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] " +
                     (item.isFaded ? "opacity-45" : "opacity-100")
                   }
                 >

@@ -34,16 +34,12 @@ const stepVariants: Variants = {
   },
 };
 
-export default function HowItWorks({
-  className,
-}: {
-  className?: string;
-}) {
+export default function HowItWorks({ className }: { className?: string }) {
   return (
     <>
       <section
         className={
-          "w-full px-6 md:px-12 lg:px-20 py-24 bg-white relative overflow-hidden " +
+          "w-full px-5 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24 bg-white relative overflow-hidden " +
           inter.className +
           " " +
           (className || "")
@@ -61,7 +57,7 @@ export default function HowItWorks({
               repeat: Infinity as number,
               ease: "easeInOut" as const,
             }}
-            className="absolute -top-24 -left-24 w-96 h-96 bg-[#00bc7d]/5 rounded-full blur-3xl"
+            className="absolute -top-20 -left-20 w-56 h-56 md:w-96 md:h-96 bg-[#00bc7d]/5 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -74,7 +70,7 @@ export default function HowItWorks({
               ease: "easeInOut" as const,
               delay: 1,
             }}
-            className="absolute -bottom-24 -right-24 w-96 h-96 bg-[#00bc7d]/5 rounded-full blur-3xl"
+            className="absolute -bottom-20 -right-20 w-56 h-56 md:w-96 md:h-96 bg-[#00bc7d]/5 rounded-full blur-3xl"
           />
         </div>
 
@@ -84,9 +80,9 @@ export default function HowItWorks({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" as const }}
           viewport={{ once: true }}
-          className="text-center mb-20 flex flex-col items-center gap-4 relative z-10"
+          className="text-center mb-12 md:mb-20 flex flex-col items-center gap-4 relative z-10"
         >
-          <h2 className="font-bold text-[48px] text-center leading-[1.1] max-w-2xl">
+          <h2 className="font-bold text-3xl md:text-[48px] text-center leading-[1.1] max-w-2xl">
             <motion.span
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +108,7 @@ export default function HowItWorks({
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 max-w-7xl mx-auto relative z-10"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-20 max-w-7xl mx-auto relative z-10"
         >
           {/* STEP 01 */}
           <motion.div
@@ -131,7 +127,7 @@ export default function HowItWorks({
               <div className="absolute inset-0 bg-black/5 transition-opacity duration-500" />
 
               {/* Stacked Glass Chips Mockup */}
-              <div className="absolute inset-0 flex items-center justify-center p-10">
+              <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 md:p-10">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -291,7 +287,7 @@ export default function HowItWorks({
                 referrerPolicy="no-referrer"
               />
               {/* Glass Container Mockup */}
-              <div className="absolute inset-0 flex items-center justify-center p-10">
+              <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 md:p-10">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -397,7 +393,7 @@ export default function HowItWorks({
                 referrerPolicy="no-referrer"
               />
               {/* Glass Container Mockup */}
-              <div className="absolute inset-0 flex items-center justify-center p-10">
+              <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 md:p-10">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}

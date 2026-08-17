@@ -53,7 +53,7 @@ export default function FeatureSection({ className }: { className?: string }) {
 
       <section
         className={
-          "w-full px-6 py-[140px] bg-white font-sans relative overflow-hidden " +
+          "w-full px-5 sm:px-6 py-20 md:py-28 lg:py-[140px] bg-white font-sans relative overflow-hidden " +
           (className || "")
         }
       >
@@ -66,7 +66,7 @@ export default function FeatureSection({ className }: { className?: string }) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" as const }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-[1.1]"
+            className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-[1.1]"
             style={{ fontFamily: "'Chakra Petch', sans-serif" }}
           >
             Explore the Power of <br />
@@ -77,7 +77,7 @@ export default function FeatureSection({ className }: { className?: string }) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" as const }}
-            className="text-lg text-gray-500 max-w-2xl mx-auto"
+            className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto"
           >
             Scale your customer experience with an AI chatbot that understands
             context, automates workflows, and learns with every chat.

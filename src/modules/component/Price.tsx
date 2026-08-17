@@ -78,7 +78,7 @@ export default function Pricing06Kelo({ className }: { className?: string }) {
 
       <section
         className={
-          "w-full px-0 py-16 bg-[hsl(var(--background))] font-body overflow-hidden relative " +
+          "w-full px-0 py-12 md:py-16 bg-[hsl(var(--background))] font-body overflow-hidden relative " +
           (className || "")
         }
       >
@@ -89,7 +89,7 @@ export default function Pricing06Kelo({ className }: { className?: string }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
-            className="font-sans font-semibold text-[48px] text-[hsl(var(--foreground))] leading-[1.04] tracking-tight"
+            className="font-sans font-semibold text-3xl sm:text-4xl md:text-[48px] text-[hsl(var(--foreground))] leading-[1.04] tracking-tight"
           >
             Simple, flexible plans.
           </motion.h2>
@@ -110,7 +110,7 @@ export default function Pricing06Kelo({ className }: { className?: string }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="mx-6 md:mx-10 lg:mx-auto max-w-[1440px] relative rounded-[20px] bg-[hsl(var(--surface))] shadow-[var(--shadow-panel)] overflow-hidden"
+          className="mx-4 sm:mx-6 md:mx-10 lg:mx-auto max-w-[1440px] relative rounded-[20px] bg-[hsl(var(--surface))] shadow-[var(--shadow-panel)] overflow-hidden"
         >
           {/* Background photo layer */}
           <div className="absolute inset-0 z-0">
@@ -125,7 +125,7 @@ export default function Pricing06Kelo({ className }: { className?: string }) {
           </div>
 
           {/* Inner white panel */}
-          <div className="relative z-10 bg-white/40 backdrop-blur-xl m-[40px] rounded-[12px] overflow-hidden border border-white/10">
+          <div className="relative z-10 bg-white/40 backdrop-blur-xl m-3 sm:m-5 md:m-8 lg:m-[40px] rounded-[12px] overflow-hidden border border-white/10">
             <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-white/10">
               {plans.map((plan, idx) => (
                 <motion.div
@@ -134,12 +134,12 @@ export default function Pricing06Kelo({ className }: { className?: string }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.25 + idx * 0.1 }}
-                  className="flex flex-col px-8 py-10"
+                  className="flex flex-col px-5 sm:px-8 py-8 sm:py-10"
                 >
                   {/* TOP SECTION */}
                   <div className="pb-8 border-b border-white/10">
-                    <div className="flex items-start justify-between mb-2">
-                      <h3 className="font-sans font-bold text-2xl text-[hsl(var(--foreground))]">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
+                      <h3 className="font-sans font-bold text-xl sm:text-2xl text-[hsl(var(--foreground))]">
                         {plan.name}
                       </h3>
                       {plan.isPopular && (
@@ -153,10 +153,10 @@ export default function Pricing06Kelo({ className }: { className?: string }) {
                     </p>
 
                     <div className="mt-8 flex items-baseline gap-1">
-                      <span className="font-sans font-bold text-5xl text-[hsl(var(--foreground))] leading-none">
+                      <span className="font-sans font-bold text-4xl sm:text-5xl text-[hsl(var(--foreground))] leading-none">
                         {plan.price}
                       </span>
-                      <span className="text-xs font-medium tracking-[0.1em] uppercase text-[hsl(var(--foreground-muted))] font-body ml-1">
+                      <span className="text-[10px] sm:text-xs font-medium tracking-[0.1em] uppercase text-[hsl(var(--foreground-muted))] font-body ml-1">
                         /MONTH
                       </span>
                     </div>
