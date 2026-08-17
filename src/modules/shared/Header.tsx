@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Header({ className }: { className?: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -56,21 +57,20 @@ export default function Header({ className }: { className?: string }) {
                 alt="Kelo Logo"
                 width={96}
                 height={24}
-                style={{ height: "24px", width: "auto" }}
                 referrerPolicy="no-referrer"
               />
             </div>
 
             <div className="hidden md:flex items-center gap-8 flex-shrink-0">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item}
                   href={"#" + item.toLowerCase()}
                   className="text-[15px] font-medium text-white/70 hover:text-white transition-colors relative group"
                 >
                   {item}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full" />
-                </a>
+                </Link>
               ))}
             </div>
 
@@ -111,14 +111,14 @@ export default function Header({ className }: { className?: string }) {
               >
                 <div className="flex flex-col gap-1">
                   {navItems.map((item) => (
-                    <a
+                    <Link
                       key={item}
                       href={"#" + item.toLowerCase()}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className="px-4 py-3 rounded-2xl text-[15px] font-medium text-white/80 hover:text-white hover:bg-white/10 transition-colors"
                     >
                       {item}
-                    </a>
+                    </Link>
                   ))}
                 </div>
                 <div className="mt-3 pt-3 border-t border-white/10 flex flex-col gap-2">

@@ -123,7 +123,6 @@ export default function Footer({ className }: { className?: string }) {
                   alt="Kelo Logo"
                   width={96}
                   height={24}
-                  style={{ height: "24px", width: "auto" }}
                   referrerPolicy="no-referrer"
                 />
               </div>
