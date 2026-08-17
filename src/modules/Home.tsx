@@ -1,4 +1,6 @@
 "use client";
+import BlogSection from "./component/Blog";
+import FAQ from "./component/Faq";
 import FeatureSection from "./component/Feature";
 import HowItWorks from "./component/HowItWork";
 import IntegrationSection from "./component/Integration";
@@ -11,6 +13,8 @@ const HomePage = () => {
       <HowItWorks />
       <IntegrationSection />
       <Price />
+      <FAQ />
+      <BlogSection />
     </>
   );
 };

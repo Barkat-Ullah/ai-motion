@@ -55,8 +55,9 @@ export default function Header({ className }: { className?: string }) {
               <Image
                 src="https://cdn.jiro.build/Kelo/Kelo%20White.svg"
                 alt="Kelo Logo"
-                width={96}
+                width={64}
                 height={24}
+                loading="eager"
                 referrerPolicy="no-referrer"
               />
             </div>
