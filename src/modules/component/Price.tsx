@@ -77,8 +77,9 @@ export default function Pricing06Kelo({ className }: { className?: string }) {
       />
 
       <section
+        id="pricing"
         className={
-          "w-full px-0 py-12 md:py-16 bg-[hsl(var(--background))] font-body overflow-hidden relative " +
+          "scroll-mt-28 w-full px-0 py-12 md:py-16 bg-[hsl(var(--background))] font-body overflow-hidden relative " +
           (className || "")
         }
       >

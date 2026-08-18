@@ -38,8 +38,9 @@ export default function HowItWorks({ className }: { className?: string }) {
   return (
     <>
       <section
+        id="solutions"
         className={
-          "w-full px-5 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24 bg-white relative overflow-hidden " +
+          "scroll-mt-28 w-full px-5 sm:px-6 md:px-12 lg:px-20 py-16 md:py-24 bg-white relative overflow-hidden " +
           inter.className +
           " " +
           (className || "")

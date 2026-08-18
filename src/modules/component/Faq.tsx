@@ -174,8 +174,9 @@ export default function FAQ({ className }: { className?: string }) {
 
   return (
     <section
+      id="about"
       className={
-        "bg-white py-[60px] sm:py-[80px] px-4 sm:px-6 md:px-[80px] font-sans " + (className || "")
+        "scroll-mt-28 bg-white py-[60px] sm:py-[80px] px-4 sm:px-6 md:px-[80px] font-sans " + (className || "")
       }
     >
       <div className="max-w-[780px] mx-auto">

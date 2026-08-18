@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
@@ -9,12 +9,18 @@ import Link from "next/link";
 export default function Header({ className }: { className?: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navItems = ["Features", "Solutions", "Pricing", "About"] as const;
+  const [isScrolled, setIsScrolled] = useState(false);
+  const navItems = ["Features", "Solutions", "Pricing", "About", "Blog"] as const;
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.6;
     }
+
+    const handleScroll = () => setIsScrolled(window.scrollY > 16);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -48,9 +54,16 @@ export default function Header({ className }: { className?: string }) {
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" as const }}
-          className="relative z-50 px-4 md:px-8 pt-6 pb-2"
+          className="fixed inset-x-0 top-0 z-50 px-4 md:px-8 pt-6 pb-2"
         >
-          <div className="max-w-5xl mx-auto flex items-center justify-between p-[10px] rounded-full bg-white/5 backdrop-blur-xl border border-white/10">
+          <div
+            className={
+              "max-w-5xl mx-auto flex items-center justify-between p-[10px] rounded-full backdrop-blur-xl border transition-all duration-300 " +
+              (isScrolled
+                ? "bg-black/60 border-white/20 shadow-lg"
+                : "bg-white/5 border-white/10")
+            }
+          >
             <div className="flex-1 flex items-center pl-3 flex-shrink-0 whitespace-nowrap">
               <Image
                 src="https://cdn.jiro.build/Kelo/Kelo%20White.svg"

@@ -45,8 +45,9 @@ export default function BlogSection({ className }: { className?: string }) {
   return (
     <>
       <section
+        id="blog"
         className={
-          "bg-white py-20 px-6 md:px-20 font-sans " + (className || "")
+          "scroll-mt-28 bg-white py-20 px-6 md:px-20 font-sans " + (className || "")
         }
       >
         <div className="max-w-[1200px] mx-auto">

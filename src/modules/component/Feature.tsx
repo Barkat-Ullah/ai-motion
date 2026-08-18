@@ -52,8 +52,9 @@ export default function FeatureSection({ className }: { className?: string }) {
       />
 
       <section
+        id="features"
         className={
-          "w-full px-5 sm:px-6 py-20 md:py-28 lg:py-[140px] bg-white font-sans relative overflow-hidden " +
+          "scroll-mt-28 w-full px-5 sm:px-6 py-20 md:py-28 lg:py-[140px] bg-white font-sans relative overflow-hidden " +
           (className || "")
         }
       >
